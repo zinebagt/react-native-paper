@@ -1,18 +1,19 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import color from 'color';
 import { StyleSheet, View } from 'react-native';
 import withTheme from '../core/withTheme';
-import type { Theme } from '../types';
 import { black, white } from '../styles/colors';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
+import type { Theme } from '../types';
 
 type Props = {
   /**
    *  Whether divider has a left inset.
    */
   inset?: boolean,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

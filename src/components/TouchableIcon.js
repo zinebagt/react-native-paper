@@ -1,19 +1,19 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
 import color from 'color';
-
 import TouchableRipple from './TouchableRipple';
 import Icon from './Icon';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { IconSource } from './Icon';
 
 type Props = {
   source: IconSource,
   color: string,
   size?: number,
-  onPress: ?Function,
-  style?: any,
+  onPress?: ?() => mixed,
+  style?: ViewStyleProp,
 };
 
 const TouchableIcon = ({

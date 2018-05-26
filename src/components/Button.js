@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { ActivityIndicator, Animated, View, StyleSheet } from 'react-native';
@@ -9,6 +9,7 @@ import Text from './Typography/Text';
 import TouchableRipple from './TouchableRipple';
 import { black, white } from '../styles/colors';
 import withTheme from '../core/withTheme';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../types';
 import type { IconSource } from './Icon';
 
@@ -54,7 +55,7 @@ type Props = {
    * Function to execute on press.
    */
   onPress?: () => mixed,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

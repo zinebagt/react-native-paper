@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import {
@@ -17,6 +17,7 @@ import TouchableRipple from './TouchableRipple';
 import Text from './Typography/Text';
 import { black, white } from '../styles/colors';
 import withTheme from '../core/withTheme';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../types';
 import type { IconSource } from './Icon';
 
@@ -163,8 +164,8 @@ type Props<T> = {
    * barStyle={{ paddingBottom: 48 }}
    * ```
    */
-  barStyle?: any,
-  style?: any,
+  barStyle?: ViewStyleProp,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

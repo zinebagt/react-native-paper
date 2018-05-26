@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 export const red50 = '#ffebee';
 export const red100 = '#ffcdd2';

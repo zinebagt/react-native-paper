@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import {
@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import color from 'color';
 import withTheme from '../core/withTheme';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../types';
 
 const ANDROID_VERSION_LOLLIPOP = 21;
@@ -30,7 +31,7 @@ type Props = {
   /**
    * Function to execute on press. If not set, will cause the touchable to be disabled.
    */
-  onPress?: ?Function,
+  onPress?: ?() => mixed,
   /**
    * Color of the ripple effect.
    */
@@ -43,7 +44,7 @@ type Props = {
    * Content of the `TouchableRipple`.
    */
   children: React.Node,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

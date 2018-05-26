@@ -1,7 +1,8 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 
 type Props = {
   /**
@@ -16,7 +17,7 @@ type Props = {
    * @internal
    */
   siblings?: Array<string>,
-  style?: any,
+  style?: ViewStyleProp,
 };
 
 /**

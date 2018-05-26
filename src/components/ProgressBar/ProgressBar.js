@@ -1,10 +1,11 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
 import setColor from 'color';
 import ProgressBarComponent from './ProgressBarComponent';
 import withTheme from '../../core/withTheme';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../../types';
 
 type Props = {
@@ -16,7 +17,7 @@ type Props = {
    * Color of the progress bar.
    */
   color?: string,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

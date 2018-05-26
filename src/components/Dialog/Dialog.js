@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { StyleSheet, Platform, Animated } from 'react-native';
@@ -8,6 +8,7 @@ import DialogContent from './DialogContent';
 import DialogActions from './DialogActions';
 import DialogTitle from './DialogTitle';
 import DialogScrollArea from './DialogScrollArea';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 
 const AnimatedSurface = Animated.createAnimatedComponent(Surface);
 
@@ -28,7 +29,7 @@ type Props = {
    * Content of the `Dialog`.
    */
   children: React.Node,
-  style?: any,
+  style?: ViewStyleProp,
 };
 
 /**

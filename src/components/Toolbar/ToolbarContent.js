@@ -1,14 +1,12 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
 import color from 'color';
-
 import Text from '../Typography/Text';
-
 import withTheme from '../../core/withTheme';
 import { black } from '../../styles/colors';
-
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../../types';
 
 type Props = {
@@ -32,7 +30,7 @@ type Props = {
    * Style for the subtitle.
    */
   subtitleStyle?: any,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

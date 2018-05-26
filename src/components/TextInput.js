@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import {
@@ -10,6 +10,7 @@ import {
 import { polyfill } from 'react-lifecycles-compat';
 import Text from './Typography/Text';
 import withTheme from '../core/withTheme';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../types';
 
 const AnimatedText = Animated.createAnimatedComponent(Text);
@@ -66,7 +67,7 @@ type Props = {
    * Value of the text input.
    */
   value?: string,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

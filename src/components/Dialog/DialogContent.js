@@ -1,14 +1,15 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 
 type Props = {
   /**
    * Content of the `DialogContent`.
    */
   children: React.Node,
-  style?: any,
+  style?: ViewStyleProp,
 };
 
 /**

@@ -1,15 +1,16 @@
-/* @flow */
+/* @flow strict */
 
 import color from 'color';
 import * as React from 'react';
 import Text from './Text';
 import withTheme from '../../core/withTheme';
+import type { TextStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../../types';
 
 type Props = {
   alpha: number,
   family: 'regular' | 'medium' | 'light' | 'thin',
-  style?: any,
+  style?: TextStyleProp,
   theme: Theme,
 };
 

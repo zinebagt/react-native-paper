@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { View, StyleSheet, TouchableWithoutFeedback } from 'react-native';
@@ -7,6 +7,7 @@ import Icon from './Icon';
 import Text from './Typography/Text';
 import { black, white } from '../styles/colors';
 import withTheme from '../core/withTheme';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../types';
 import type { IconSource } from './Icon';
 
@@ -27,7 +28,7 @@ type Props = {
    * Function to execute on delete. The delete button appears only when this prop is specified.
    */
   onDelete?: () => mixed,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

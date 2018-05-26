@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import {
@@ -12,6 +12,7 @@ import CardActions from './CardActions';
 import CardCover from './CardCover';
 import Surface from '../Surface';
 import withTheme from '../../core/withTheme';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../../types';
 
 const AnimatedSurface = Animated.createAnimatedComponent(Surface);
@@ -29,7 +30,7 @@ type Props = {
    * Content of the `Card`.
    */
   children: React.Node,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

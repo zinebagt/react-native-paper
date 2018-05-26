@@ -1,9 +1,10 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { StyleSheet, View, Image } from 'react-native';
 import withTheme from '../../core/withTheme';
 import { grey200 } from '../../styles/colors';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../../types';
 
 type Props = {
@@ -15,7 +16,7 @@ type Props = {
    * @internal
    */
   total?: number,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

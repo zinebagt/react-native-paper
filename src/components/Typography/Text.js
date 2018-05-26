@@ -1,12 +1,13 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { Text as NativeText } from 'react-native';
 import withTheme from '../../core/withTheme';
+import type { TextStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../../types';
 
 type Props = {
-  style?: any,
+  style?: TextStyleProp,
   /**
    * @optional
    */

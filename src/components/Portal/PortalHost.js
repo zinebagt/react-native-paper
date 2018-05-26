@@ -1,13 +1,14 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
 import PortalManager from './PortalManager';
 import createReactContext, { type Context } from 'create-react-context';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 
 type Props = {
   children: React.Node,
-  style?: any,
+  style?: ViewStyleProp,
 };
 
 type Operation =

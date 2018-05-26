@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { StyleSheet, TextInput } from 'react-native';
@@ -7,6 +7,7 @@ import color from 'color';
 import withTheme from '../core/withTheme';
 import TouchableIcon from './TouchableIcon';
 import Surface from './Surface';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../types';
 import type { IconSource } from './Icon';
 
@@ -31,7 +32,7 @@ type Props = {
    * Callback to execute if we want the left icon to act as button.
    */
   onIconPress?: () => mixed,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

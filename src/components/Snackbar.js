@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { StyleSheet, Animated } from 'react-native';
@@ -7,6 +7,7 @@ import Text from './Typography/Text';
 import ThemedPortal from './Portal/ThemedPortal';
 import withTheme from '../core/withTheme';
 import { white } from '../styles/colors';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../types';
 
 type Props = {
@@ -35,7 +36,7 @@ type Props = {
    * Text content of the Snackbar.
    */
   children: React.Node,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

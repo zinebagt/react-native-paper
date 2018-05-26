@@ -1,10 +1,11 @@
-/* @flow */
+/* @flow strict */
 import * as React from 'react';
 
 import { grey400, grey800, grey50, white, black } from '../styles/colors';
 import { Switch as NativeSwitch, Platform } from 'react-native';
 import setColor from 'color';
 import withTheme from '../core/withTheme';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../types';
 
 type Props = {
@@ -23,8 +24,8 @@ type Props = {
   /**
    * Callback called with the new value when it changes.
    */
-  onValueChange?: Function,
-  style?: any,
+  onValueChange?: (value: boolean) => mixed,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

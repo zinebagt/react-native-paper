@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 /* eslint-disable react/no-unused-prop-types */
 
 import * as React from 'react';

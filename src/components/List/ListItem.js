@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import color from 'color';
 import * as React from 'react';
@@ -7,6 +7,7 @@ import Icon from '../Icon';
 import TouchableRipple from '../TouchableRipple';
 import Text from '../Typography/Text';
 import withTheme from '../../core/withTheme';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../../types';
 import type { IconSource } from '../Icon';
 
@@ -35,7 +36,7 @@ type Props = {
    * @optional
    */
   theme: Theme,
-  style?: any,
+  style?: ViewStyleProp,
 };
 
 /**

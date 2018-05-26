@@ -1,10 +1,11 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { Platform } from 'react-native';
 
 import ToolbarAction from './ToolbarAction';
 import Icon from '../Icon';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 
 type Props = {
   /**
@@ -15,7 +16,7 @@ type Props = {
    * Function to execute on press.
    */
   onPress?: () => mixed,
-  style?: any,
+  style?: ViewStyleProp,
 };
 
 /**

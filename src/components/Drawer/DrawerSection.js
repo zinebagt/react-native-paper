@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import color from 'color';
 import * as React from 'react';

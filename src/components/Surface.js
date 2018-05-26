@@ -1,10 +1,11 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
 import shadow from '../styles/shadow';
 import withTheme from '../core/withTheme';
 import * as Colors from '../styles/colors';
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../types';
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
    * Content of the `Surface`.
    */
   children: React.Node,
-  style?: any,
+  style?: ViewStyleProp,
   /**
    * @optional
    */

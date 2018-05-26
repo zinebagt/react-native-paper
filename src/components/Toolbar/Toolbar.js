@@ -1,4 +1,4 @@
-/* @flow */
+/* @flow strict */
 
 import * as React from 'react';
 import {
@@ -9,12 +9,15 @@ import {
   SafeAreaView,
 } from 'react-native';
 import color from 'color';
-
 import ToolbarContent from './ToolbarContent';
 import ToolbarAction from './ToolbarAction';
 import ToolbarBackAction from './ToolbarBackAction';
 import withTheme from '../../core/withTheme';
 import { black, white } from '../../styles/colors';
+import type {
+  ViewStyleProp,
+  DangerouslyImpreciseStyleProp,
+} from 'react-native/Libraries/StyleSheet/StyleSheet';
 import type { Theme } from '../../types';
 
 type Props = {
@@ -37,7 +40,7 @@ type Props = {
    * @optional
    */
   theme: Theme,
-  style?: any,
+  style?: ViewStyleProp,
 };
 
 const DEFAULT_TOOLBAR_HEIGHT = 56;
@@ -180,8 +183,11 @@ class Toolbar extends React.Component<Props> {
         {...rest}
       >
         <View style={[{ height, marginTop: statusBarHeight }, styles.wrapper]}>
-          {childrenArray.filter(Boolean).map((child: any, i) => {
-            const props: { color: ?string, style?: any } = {
+          {childrenArray.filter(Boolean).map((child: ?React.Element<*>, i) => {
+            const props: {
+              color: ?string,
+              style?: DangerouslyImpreciseStyleProp,
+            } = {
               color:
                 typeof child.props.color !== 'undefined'
                   ? child.props.color

@@ -48,6 +48,9 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-tester": "^5.0.0",
     "babel-preset-react-native": "^4.0.0",
+    "enzyme": "^3.4.4",
+    "enzyme-adapter-react-16": "^1.2.0",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-config-callstack-io": "^1.1.1",
     "eslint-plugin-prettier": "^2.6.0",
@@ -56,8 +59,8 @@
     "husky": "^0.14.3",
     "jest": "^23.0.0",
     "prettier": "^1.12.1",
-    "react": "16.3.1",
-    "react-dom": "16.3.1",
+    "react": "16.4.2",
+    "react-dom": "16.4.2",
     "react-native": "~0.55.4",
     "react-native-vector-icons": "~4.6.0",
     "react-test-renderer": "16.3.1"
@@ -69,6 +72,8 @@
   },
   "jest": {
     "preset": "react-native",
+    "setupTestFrameworkScriptFile": "<rootDir>/scripts/test-setup.js",
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
     "modulePathIgnorePatterns": [
       "<rootDir>/example/node_modules"
     ]

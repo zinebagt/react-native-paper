@@ -10,6 +10,9 @@ import {
   Platform,
 } from 'react-native';
 import { BottomNavigation } from 'react-native-paper';
+import Contacts from './Contacts';
+import Article from './Article';
+import Chat from './Chat';
 
 type State = {
   index: number,
@@ -42,7 +45,10 @@ export default class BottomNavigationExample extends React.Component<
   {},
   State
 > {
-  static title = 'Bottom Navigation';
+  static title = 'react-native-paper';
+  static navigationOptions: {
+    headerLeft: null,
+  };
 
   state = {
     index: 0,
@@ -51,20 +57,20 @@ export default class BottomNavigationExample extends React.Component<
       {
         key: 'library',
         title: 'Library',
-        icon: 'inbox',
+        icon: 'book',
+        color: '#00796b',
+      },
+      {
+        key: 'chat',
+        title: 'Chat',
+        icon: 'chat',
         color: '#2962ff',
         badge: true,
       },
       {
-        key: 'favorites',
-        title: 'Favorites',
-        icon: 'favorite',
-        color: '#00796b',
-      },
-      {
-        key: 'purchased',
-        title: 'Purchased',
-        icon: 'shop',
+        key: 'contacts',
+        title: 'Contacts',
+        icon: 'contacts',
         color: '#c51162',
       },
     ],
@@ -77,9 +83,9 @@ export default class BottomNavigationExample extends React.Component<
         onIndexChange={index => this.setState({ index })}
         renderScene={BottomNavigation.SceneMap({
           album: PhotoGallery,
-          library: PhotoGallery,
-          favorites: PhotoGallery,
-          purchased: PhotoGallery,
+          library: Article,
+          chat: Chat,
+          contacts: Contacts,
         })}
       />
     );

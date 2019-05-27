@@ -44,12 +44,6 @@ export type Theme = {
   },
 };
 
-export type ThemeShape = $Shape<{
-  ...Theme,
-  colors: $Shape<$PropertyType<Theme, 'colors'>>,
-  fonts: $Shape<$PropertyType<Theme, 'fonts'>>,
-}>;
-
 export type $RemoveChildren<T> = $Diff<
   React.ElementConfig<T>,
   { children: any }

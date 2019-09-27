@@ -123,7 +123,7 @@
     ]
   },
   "@react-native-community/bob": {
-    "source": "src",
+    "source": "./src",
     "output": "lib",
     "targets": [
       "module",
